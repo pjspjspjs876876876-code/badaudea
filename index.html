@@ -35,6 +35,8 @@
 </script >
 <script>
 (()=>{
+  var hideOld=document.createElement('style');hideOld.textContent='.language-switch[aria-label="Language"]{display:none!important}';document.head.append(hideOld);
+  document.querySelectorAll('.language-switch').forEach(el=>el.remove());
   const langBar=document.createElement('div');
   langBar.className='language-switch';
   langBar.innerHTML='<button type="button" data-safe-lang="ko">&#54620;&#44397;&#50612;</button><button type="button" data-safe-lang="en">English</button>';
