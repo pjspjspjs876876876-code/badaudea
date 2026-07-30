@@ -32,5 +32,18 @@
       function setHomeLanguage(lang){localStorage.setItem('badaEodiLang',lang);const t=copy[lang];document.documentElement.lang=lang;document.querySelector('.logo').innerHTML='<img src="assets/bada-eodi-logo.svg" alt="">'+t.logo;document.querySelector('.hero-copy .eyebrow').textContent=t.eyebrow;document.querySelector('.hero h1').innerHTML=t.title;document.querySelector('.hero-copy>p:not(.eyebrow)').textContent=t.lead;document.querySelector('.cta').innerHTML=t.start;document.querySelector('.intro h2').innerHTML=t.introTitle;document.querySelector('.intro p').textContent=t.intro;document.querySelector('.feature h2').innerHTML=t.featureTitle;document.querySelector('.feature>div:nth-child(2)>p:not(.eyebrow)').textContent=t.featureLead;document.querySelectorAll('.feature-list span').forEach((el,i)=>el.textContent=t.items[i]);document.querySelector('.spots h2').innerHTML=t.spotsTitle;document.querySelector('.spots-head p').textContent=t.spotsLead;document.querySelectorAll('.spot span').forEach(el=>el.textContent=t.open);document.querySelectorAll('[data-home-lang]').forEach(b=>b.classList.toggle('active',b.dataset.homeLang===lang));}
       document.querySelectorAll('[data-home-lang]').forEach(b=>b.onclick=()=>setHomeLanguage(b.dataset.homeLang));setHomeLanguage(localStorage.getItem('badaEodiLang')||'ko');
     })();
+</script >
+<script>
+(()=>{
+  const langBar=document.createElement('div');
+  langBar.className='language-switch';
+  langBar.innerHTML='<button type="button" data-safe-lang="ko">&#54620;&#44397;&#50612;</button><button type="button" data-safe-lang="en">English</button>';
+  document.querySelector('.nav').after(langBar);
+  const english={title:'Make your beach trip<br>more comfortable.',lead:'Find facilities, parking, and time-based shade information for Gwangalli and Haeundae in one place.',start:'Open smart map <b>&rarr;</b>',intro:'Plan your day<br>on one map.',introLead:'Bada Eodi is a smart marine-tourism map of Busan, built from facilities researched by our team. Information is updated as we collect it.',feature:'The information you need,<br>when you need it.',featureLead:'Choose the facilities you need on the map and select a location to see its details.',items:['Parking &middot; Restrooms &middot; Showers','Attractions and beach parks','Shade by date and time'],spots:'Two beaches,<br>one map',spotsLead:'Pick a beach and check the facilities and shade information you need before your visit.',open:'Open smart map &rarr;'};
+  function useEnglish(){document.documentElement.lang='en';document.querySelector('.logo').innerHTML='<img src="assets/bada-eodi-logo.svg" alt="">Bada Eodi';document.querySelector('.hero h1').innerHTML=english.title;document.querySelector('.hero-copy>p:not(.eyebrow)').textContent=english.lead;document.querySelector('.cta').innerHTML=english.start;document.querySelector('.intro h2').innerHTML=english.intro;document.querySelector('.intro p').textContent=english.introLead;document.querySelector('.feature h2').innerHTML=english.feature;document.querySelector('.feature>div:nth-child(2)>p:not(.eyebrow)').textContent=english.featureLead;document.querySelectorAll('.feature-list span').forEach((e,i)=>e.innerHTML=english.items[i]);document.querySelector('.spots h2').innerHTML=english.spots;document.querySelector('.spots-head p').textContent=english.spotsLead;document.querySelectorAll('.spot span').forEach(e=>e.innerHTML=english.open);}
+  langBar.querySelectorAll('button').forEach(b=>b.onclick=()=>{localStorage.setItem('badaEodiLang',b.dataset.safeLang);location.reload();});
+  const selected=localStorage.getItem('badaEodiLang')||'ko';langBar.querySelector('[data-safe-lang="'+selected+'"]').classList.add('active');if(selected==='en')useEnglish();
+})();
+</script >
 </body>
 </html>
