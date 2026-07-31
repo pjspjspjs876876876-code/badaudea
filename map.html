@@ -13,21 +13,27 @@
   /* Desktop: keep controls together on the right and prevent panel overlap. */
   header{justify-content:flex-start;gap:8px}.brand{margin-right:auto}.locate{margin-left:auto}.map-language{margin-left:0}.plan-toggle{margin-left:0}.itinerary-panel{top:18px;left:auto;right:clamp(14px,4vw,48px)}.detail{top:350px}.itinerary-panel[hidden]{display:none!important}
   @media(max-width:680px){header{gap:5px;padding:10px 14px}.brand{margin-right:auto}.brand strong{font-size:1.12rem}.locate,.plan-toggle{padding:.48rem .6rem;font-size:.72rem}.map-language button{padding:6px 7px;font-size:.66rem}.itinerary-panel{top:88px;right:14px;left:14px;width:auto}.detail{top:88px}}
-  .language-change-mask{position:fixed;z-index:5000;inset:0;pointer-events:none;background:radial-gradient(circle at 86% 8%,#9ce7fb 0,#087eaf 28%,#04253b 75%);opacity:0;transform:scale(.9);transition:opacity .3s ease,transform .48s cubic-bezier(.2,.8,.2,1)}.language-change-mask.show{opacity:1;transform:scale(1)}
+  .language-change-mask{position:fixed;z-index:5000;inset:0;pointer-events:none;background:radial-gradient(circle at 86% 8%,#9ce7fb 0,#087eaf 28%,#04253b 75%);opacity:0;transform:scale(.9);transition:opacity .3s ease,transform .48s cubic-bezier(.2,.8,.2,1)}.language-change-mask.show{opacity:1;transform:scale(1)}.plan-fixed-stop{padding:9px;border:1px solid var(--line);border-radius:8px;background:#f2f8fa;font-size:.82rem;font-weight:750}.today-course{margin:0 0 13px;padding:12px;border-radius:11px;background:linear-gradient(135deg,#e1f6fb,#effbff);border:1px solid #c9e9f2}.today-course b{display:block;color:#075477;font-size:.82rem}.today-course p{margin:5px 0 0!important;color:#315d70!important;font-size:.72rem!important}.plan-recommendation{margin-top:8px;padding:8px 9px;border-radius:8px;background:#edf7fb;color:#175875;font-size:.72rem;line-height:1.45}.route-summary{position:absolute;z-index:930;top:18px;right:clamp(14px,4vw,48px);width:min(340px,calc(100% - 28px));padding:18px;border:1px solid #fff;border-radius:16px;background:#fffffff5;box-shadow:0 16px 36px #07334836}.route-summary[hidden]{display:none}.route-summary-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.route-summary h3{margin:0;font-size:1.08rem}.route-summary p{margin:5px 0 13px;color:var(--muted);font-size:.74rem;line-height:1.45}.route-summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:12px}.route-summary-grid div{padding:9px 6px;border-radius:9px;background:#edf7fb;text-align:center}.route-summary-grid span{display:block;color:var(--muted);font-size:.63rem}.route-summary-grid strong{display:block;margin-top:4px;color:#075477;font-size:.83rem}.route-summary-cancel{width:100%;border:0;border-radius:9px;padding:10px;background:#eaf1f3;color:#345;font-weight:800}.course-highlight-marker{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#e43f3f;color:#fff;border:4px solid #fff;box-shadow:0 4px 12px #8c101080;font-size:.86rem;font-weight:900;animation:courseMarkerPop .35s ease-out}.route-direction-arrow{display:grid;place-items:center;width:22px;height:22px;border:2px solid #fff;border-radius:50%;background:#087eaf;color:#fff;box-shadow:0 2px 6px #06476780;font-size:12px;font-weight:900}@keyframes courseMarkerPop{from{transform:scale(.5);opacity:.2}to{transform:scale(1);opacity:1}}@media(max-width:680px){.route-summary{top:88px;right:14px}.route-summary-grid{gap:5px}}
+  .route-direction-arrow.returning{background:#e25a4f}.route-color-legend{display:flex;gap:12px;margin:-3px 0 12px;font-size:.7rem;color:var(--muted)}.route-color-legend span{display:flex;align-items:center;gap:5px}.route-color-dot{width:9px;height:9px;border-radius:50%;background:#087eaf}.route-color-dot.returning{background:#e25a4f}
+  .weather-widget{display:flex;align-items:center;gap:7px;min-width:120px;padding:.5rem .72rem;border:1px solid #c9effb;border-radius:9px;background:#ffffff1c;color:#fff}.weather-widget span{font-size:1.05rem}.weather-widget div{line-height:1.15}.weather-widget strong{display:block;font-size:.72rem}.weather-widget small{display:block;margin-top:2px;font-size:.58rem;opacity:.78}.weather-widget.rainy{background:#405d75aa}.weather-widget.cloudy{background:#6c7f8c88}.weather-widget.sunny{background:#f1a72b44}@media(max-width:800px){.weather-widget{position:absolute;z-index:920;top:80px;right:14px;min-width:auto;background:#063452dd}}
+  .plan-toggle.has-active-route::before{content:"";display:inline-block;width:7px;height:7px;margin-right:6px;border-radius:50%;background:#ef4937;box-shadow:0 0 0 3px #ef493733;vertical-align:1px}
+  .gate-box{position:relative}.gate-close{position:absolute;z-index:3;top:0;right:0;width:42px;height:42px;border:1px solid #ffffff80;border-radius:50%;background:#00182788;color:#fff;font-size:1.35rem}.place-gate-toggle{border:1px solid #c9effb;border-radius:9px;padding:.58rem .82rem;background:#ffffff22;color:#fff;font-weight:750}@media(max-width:680px){.place-gate-toggle{padding:.48rem .6rem;font-size:.72rem}.gate-close{top:-5px}}
+  .sidebar-toggle{position:absolute;z-index:2;top:10px;right:10px;width:34px;height:34px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--navy);font-size:1.05rem;font-weight:900;box-shadow:0 3px 9px #0733481f}.sidebar-content{transition:opacity .2s ease}.sidebar.collapsed{width:54px;height:54px;padding:0;border-radius:14px}.sidebar.collapsed .sidebar-content{display:none}.sidebar.collapsed .sidebar-toggle{top:9px;right:9px}.sidebar:not(.collapsed) .sidebar-content{padding-top:4px}.sidebar:not(.collapsed) .section-title:first-child{padding-right:38px}
+  .menu-board{position:relative;overflow:hidden;margin:12px 0 15px;padding:17px 16px 14px;border:1px solid #d8b66c;border-radius:15px;background:linear-gradient(145deg,#173d38 0%,#0b2927 58%,#071e1d 100%);color:#fff8df;box-shadow:inset 0 0 0 3px #ffffff0d,0 10px 22px #092b2938}.menu-board::before{content:"BADA EODI · CAFE GUIDE";position:relative;z-index:1;display:block;margin-bottom:5px;color:#d8b66c;font-size:.54rem;font-weight:900;letter-spacing:.18em}.menu-board::after{content:"☕";position:absolute;right:-13px;bottom:-28px;color:#ffffff0a;font-size:7rem;transform:rotate(-12deg)}.menu-board h3{position:relative;z-index:1;display:flex;align-items:center;gap:7px;margin:0 0 11px;padding-bottom:10px;border-bottom:1px solid #d8b66c66;color:#fff8df;font-size:.94rem;letter-spacing:.02em}.menu-board h3::before{content:"☕";display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:#d8b66c;color:#173d38;font-size:.72rem}.menu-item{position:relative;z-index:1;display:flex;align-items:baseline;gap:8px;padding:8px 0;border:0;color:#fff8df;font-size:.76rem}.menu-item span{display:flex;align-items:baseline;flex:1;gap:8px}.menu-item span::after{content:"";flex:1;border-bottom:1px dotted #f4e4b84d}.menu-item b{flex:none;color:#ffd578;font-size:.76rem;font-variant-numeric:tabular-nums}.menu-item:hover{color:#fff}.menu-item:hover b{color:#ffe8a9}@media(max-width:680px){.menu-board{padding:15px 14px 12px}.menu-item{font-size:.72rem}.menu-item b{font-size:.72rem}}
 </style>
 </head>
 <body>
-  <section class="place-gate" id="placeGate" aria-label="관광지 선택"><div class="gate-box"><p class="gate-kicker">BADA EODI SMART MAP</p><h2>어디로 떠나볼까요?</h2><div class="place-options"><button class="place-choice gwangalli" data-entry-place="gwangalli"><span>GWANGALLI BEACH</span><strong>광안리</strong></button><button class="place-choice haeundae" data-entry-place="haeundae"><span>HAEUNDAE BEACH</span><strong>해운대</strong></button></div></div></section>
-  <header><a class="brand" href="index.html" aria-label="바다어디 로비로 돌아가기"><img src="assets/bada-eodi-logo.svg" alt=""><div><small>BUSAN MARINE TOURISM</small><strong>바다어디</strong></div></a><button class="locate" id="locate">◎ 내 위치</button></header>
+  <section class="place-gate" id="placeGate" aria-label="관광지 선택"><div class="gate-box"><button class="gate-close" id="placeGateClose" aria-label="선택 화면 닫기">×</button><p class="gate-kicker">BADA EODI SMART MAP</p><h2>어디로 떠나볼까요?</h2><div class="place-options"><button class="place-choice gwangalli" data-entry-place="gwangalli"><span>GWANGALLI BEACH</span><strong>광안리</strong></button><button class="place-choice haeundae" data-entry-place="haeundae"><span>HAEUNDAE BEACH</span><strong>해운대</strong></button></div></div></section>
+  <header><a class="brand" href="index.html" aria-label="바다어디 로비로 돌아가기"><img src="assets/bada-eodi-logo.svg" alt=""><div><small>BUSAN MARINE TOURISM</small><strong>바다어디</strong></div></a><button class="locate" id="locate">◎ 내 위치</button><button class="place-gate-toggle" id="placeGateToggle">지역 선택</button></header>
   <main>
     <div id="map" aria-label="부산 해양관광 지도"></div>
-    <aside class="sidebar"><p class="section-title">관광지 선택</p><div class="places"><button class="place active" data-place="haeundae">해운대</button><button class="place" data-place="gwangalli">광안리</button></div><input class="search" id="search" placeholder="시설 이름 검색" aria-label="시설 이름 검색"><p class="section-title">원하는 정보를 골라 보세요</p><div class="chips" id="chips"></div><div class="shade-card"><strong>☀ 예상 그늘 설정</strong><div id="shadeControls" hidden><label for="shadeDate">날짜</label><input id="shadeDate" type="date"><div class="time-row"><b id="shadeTime">12:00</b><button id="now">현재 시간</button></div><input id="shadeSlider" type="range" min="0" max="1435" step="5" aria-label="그늘 시간 조절"><div class="range-label"><span>00:00</span><span>12:00</span><span>23:55</span></div></div><span id="sunStatus">그늘 카테고리를 선택하면 날짜와 시간을 조절할 수 있습니다.</span><br>검은 영역은 팀이 조사한 위치를 바탕으로 한 예상값입니다.</div></aside>
+    <aside class="sidebar collapsed"><p class="section-title">관광지 선택</p><div class="places"><button class="place active" data-place="haeundae">해운대</button><button class="place" data-place="gwangalli">광안리</button></div><input class="search" id="search" placeholder="시설 이름 검색" aria-label="시설 이름 검색"><p class="section-title">원하는 정보를 골라 보세요</p><div class="chips" id="chips"></div><div class="shade-card"><strong>☀ 예상 그늘 설정</strong><div id="shadeControls" hidden><label for="shadeDate">날짜</label><input id="shadeDate" type="date"><div class="time-row"><b id="shadeTime">12:00</b><button id="now">현재 시간</button></div><input id="shadeSlider" type="range" min="0" max="1435" step="5" aria-label="그늘 시간 조절"><div class="range-label"><span>00:00</span><span>12:00</span><span>23:55</span></div></div><span id="sunStatus">그늘 카테고리를 선택하면 날짜와 시간을 조절할 수 있습니다.</span><br>검은 영역은 팀이 조사한 위치를 바탕으로 한 예상값입니다.</div></aside>
     <aside class="detail" id="detail" hidden></aside>
     <div class="legend"><span class="dot"></span>가로수 <span class="swatch"></span>예상 그늘</div>
   </main>
 <script src="config.local.js"></script>
 <script>
-const CATEGORIES=['전체','주차장','샤워시설','세족장','족욕장','화장실','그늘','안전시설','관광명소'];
+const CATEGORIES=['전체','주차장','샤워시설','세족장','화장실','그늘','관광명소','카페'];
 const SITES={haeundae:{name:'해운대 해수욕장',center:[35.1583,129.1572],zoom:16},gwangalli:{name:'광안리 해수욕장',center:[35.1542,129.1200],zoom:16}};
 // 팀 현장 조사 좌표. 좌표는 원본의 "위도, 경도"에서 지도용 [경도, 위도]로 변환해 사용합니다.
 const SHAPES=[
@@ -42,6 +48,8 @@ const TREES=[
  ...[[35.1474211,129.1144709],[35.1473158,129.1144387],[35.1471753,129.1144387],[35.1480882,129.1146855],[35.1490295,129.1149875],[35.1491085,129.1150734],[35.1492050,129.1151485],[35.1493279,129.1152558],[35.1507938,129.1163718],[35.1509342,129.1164684],[35.1510571,129.1165542],[35.1512063,129.1166830]].map((p,i)=>({site:'gwangalli',name:`남천 가로수 ${i+1}`,lat:p[0],lng:p[1],height:4,type:'tree'}))
 ];
 const POINTS=[
+ {site:'haeundae',name:'해운대 해수욕장',category:'관광명소',kind:'beach',point:[35.1585779,129.1619500],info:'해운대 해수욕장 대표 위치입니다.',infoEn:'Representative location of Haeundae Beach.'},
+ {site:'gwangalli',name:'광안리 해수욕장',category:'관광명소',kind:'beach',point:[35.1534752,129.1190863],info:'광안리 해수욕장 대표 위치입니다.',infoEn:'Representative location of Gwangalli Beach.'},
  {site:'gwangalli',name:'세족장 1',category:'세족장',kind:'세족장',point:[35.1555016,129.1344572]},
  {site:'gwangalli',name:'세족장 2',category:'세족장',kind:'세족장',point:[35.1555215,129.1234037]},
  {site:'gwangalli',name:'광안리 공중화장실 1',category:'화장실',kind:'toilet',point:[35.1556439,129.1345193]},
@@ -64,17 +72,29 @@ const POINTS=[
  {site:'haeundae',name:'해운대 공영주차장',category:'주차장',kind:'parking',point:[35.1556877,129.1516504]},
  {site:'haeundae',name:'동백사거리 공영주차장',category:'주차장',kind:'parking',fee:'시간당 3,000원',point:[35.1575973,129.1515841]},
  {site:'haeundae',name:'해리단길 공영주차장',category:'주차장',kind:'parking',point:[35.1643952,129.1584076]},
- {site:'haeundae',name:'아쿠아리움',category:'관광명소',kind:'attraction',point:[35.1593607,129.1611550]}
+ {site:'haeundae',name:'아쿠아리움',category:'관광명소',kind:'attraction',point:[35.1593607,129.1611550]},
+ {site:'haeundae',name:'홍콩다방 부산파라다이스호텔점',category:'카페',kind:'cafe',point:[35.1599611,129.1642233],menu:[['딸기 생크림 와플','9,400원'],['로투스 생크림 와플','9,400원'],['오레오 생크림 와플','9,400원'],['동윤영','6,500원']],menuEn:[['Strawberry fresh-cream waffle','9,400 KRW'],['Lotus fresh-cream waffle','9,400 KRW'],['Oreo fresh-cream waffle','9,400 KRW'],['Dongyunyeong','6,500 KRW']]},
+ {site:'haeundae',name:'파도당',category:'카페',kind:'cafe',point:[35.1601893,129.1665841],menu:[['우지말차 바스크 치즈 케이크','9,500원'],['파도 파이','8,000원'],['모래 보틀 케이크','9,800원'],['모래 아이스크림','7,000원']],menuEn:[['Uji matcha Basque cheesecake','9,500 KRW'],['Pado pie','8,000 KRW'],['Sand bottle cake','9,800 KRW'],['Sand ice cream','7,000 KRW']]},
+ {site:'haeundae',name:'스타벅스 해운대 엑스더스카이점',category:'카페',kind:'starbucks',point:[35.1598645,129.1697175],menu:[['안내','프랜차이즈 매장']],menuEn:[['Info','Franchise cafe']]},
+ {site:'haeundae',name:'파스쿠찌 에스프레소바 해운대엘시티점',category:'카페',kind:'cafe',point:[35.1601454,129.1683869],menu:[['안내','프랜차이즈 매장']],menuEn:[['Info','Franchise cafe']]},
+ {site:'haeundae',name:'스타벅스 하버타운점',category:'카페',kind:'starbucks',point:[35.1596664,129.1596568],menu:[['안내','프랜차이즈 매장']],menuEn:[['Info','Franchise cafe']]},
+ {site:'haeundae',name:'부산당 해운대본점',category:'카페',kind:'cafe',point:[35.1601886,129.1590237],menu:[['귤 언덕 케이크','39,000원'],['멜론 요거트 언덕 케이크','41,000원'],['체리초코 언덕케이크','43,000원'],['부산 새우치아바타','6,000원']],menuEn:[['Tangerine hill cake','39,000 KRW'],['Melon yogurt hill cake','41,000 KRW'],['Cherry chocolate hill cake','43,000 KRW'],['Busan shrimp ciabatta','6,000 KRW']]},
+ {site:'haeundae',name:'옵스 마린시티점',category:'카페',kind:'cafe',point:[35.1575555,129.1506701],menu:[['슈크림','2,900원'],['용두산','6,500원'],['명란바게트','4,500원']],menuEn:[['Cream puff','2,900 KRW'],['Yongdusan','6,500 KRW'],['Pollack roe baguette','4,500 KRW']]},
+ {site:'gwangalli',name:'워킹홀리데이 브런치카페',category:'카페',kind:'cafe',point:[35.1546299,129.1197719],menu:[['아메리카노','5,500원'],['연어 에그베네딕트','19,000원'],['프렌치 토스트','16,000원']],menuEn:[['Americano','5,500 KRW'],['Salmon eggs Benedict','19,000 KRW'],['French toast','16,000 KRW']]},
+ {site:'gwangalli',name:'올선데이 광안점',category:'카페',kind:'cafe',point:[35.1549284,129.1204587],menu:[['플레인 베이글','3,000원'],['소금 베이글','3,800원'],['아메리카노','2,000원'],['카페라떼','3,500원']],menuEn:[['Plain bagel','3,000 KRW'],['Salt bagel','3,800 KRW'],['Americano','2,000 KRW'],['Cafe latte','3,500 KRW']]},
+ {site:'gwangalli',name:'콩카페 광안점',category:'카페',kind:'cafe',point:[35.1554879,129.1220603],menu:[['코코넛 연유커피','5,500원'],['연유커피','4,800원'],['비나카노','3,800원'],['비나라떼','5,000원']],menuEn:[['Coconut condensed milk coffee','5,500 KRW'],['Condensed milk coffee','4,800 KRW'],['Vinacano','3,800 KRW'],['Vina latte','5,000 KRW']]},
+ {site:'gwangalli',name:'스타벅스 광안점',category:'카페',kind:'starbucks',point:[35.1534140,129.1180127],menu:[['안내','프랜차이즈 매장']],menuEn:[['Info','Franchise cafe']]},
+ {site:'gwangalli',name:'바카 커피 라운지 광안리',category:'카페',kind:'cafe',point:[35.1547146,129.1182173],menu:[['당근 라페 토스트','12,000원'],['바카 샌드위치','7,800원']],menuEn:[['Carrot rapé toast','12,000 KRW'],['Baca sandwich','7,800 KRW']]}
 ];
 const FACILITIES=[...SHAPES.map(s=>({site:s.site,name:s.name,category:'그늘',kind:'숲',height:s.height,demoHeight:s.demoHeight,point:[s.coords[0][1],s.coords[0][0]]})),...TREES.map(t=>({site:t.site,name:t.name,category:'그늘',kind:'가로수',height:4,point:[t.lat,t.lng]})),...POINTS];
-let place='haeundae',selected=new Set(['전체']),map,baseLayer,shadeLayer,facilityLayer,userMarker;
+let place='haeundae',selected=new Set(['전체']),map,baseLayer,shadeLayer,facilityLayer,userMarker,currentPosition;
 const rad=x=>x*Math.PI/180,deg=x=>x*180/Math.PI;
 function solar(d,lat,lng){const day=Math.floor((d-new Date(d.getFullYear(),0,0))/86400000),m=d.getHours()*60+d.getMinutes(),g=2*Math.PI/365*(day-1+(m-720)/1440),eq=229.18*(.000075+.001868*Math.cos(g)-.032077*Math.sin(g)-.014615*Math.cos(2*g)-.040849*Math.sin(2*g)),decl=.006918-.399912*Math.cos(g)+.070257*Math.sin(g)-.006758*Math.cos(2*g)+.000907*Math.sin(2*g)-.002697*Math.cos(3*g)+.00148*Math.sin(3*g),hour=rad((m+eq+4*lng-540)/4-180),phi=rad(lat),alt=Math.asin(Math.sin(phi)*Math.sin(decl)+Math.cos(phi)*Math.cos(decl)*Math.cos(hour)),az=(deg(Math.atan2(Math.sin(hour),Math.cos(hour)*Math.sin(phi)-Math.tan(decl)*Math.cos(phi)))+540)%360;return{alt:deg(alt),az};}
 function move(lat,lng,east,north){return[lat+north/111320,lng+east/(111320*Math.cos(rad(lat)))];}
 function displayFootprint(s){const p=s.coords.map(([lng,lat])=>[lat,lng]),center=p.reduce((a,b)=>[a[0]+b[0]/p.length,a[1]+b[1]/p.length],[0,0]);if(s.radius)return Array.from({length:24},(_,i)=>{const a=2*Math.PI*i/24;return move(center[0],center[1],Math.cos(a)*s.radius,Math.sin(a)*s.radius);});const w=s.width||(s.type==='building'?20:10),d=s.depth||(s.type==='building'?14:8),a=move(center[0],center[1],-w/2,-d/2),b=move(center[0],center[1],w/2,-d/2),c=move(center[0],center[1],w/2,d/2),e=move(center[0],center[1],-w/2,d/2);return[a,b,c,e];}
 function hull(points){const p=[...points].sort((a,b)=>a[1]-b[1]||a[0]-b[0]),cross=(o,a,b)=>(a[1]-o[1])*(b[0]-o[0])-(a[0]-o[0])*(b[1]-o[1]),low=[],high=[];p.forEach(x=>{while(low.length>1&&cross(low.at(-2),low.at(-1),x)<=0)low.pop();low.push(x)});p.slice().reverse().forEach(x=>{while(high.length>1&&cross(high.at(-2),high.at(-1),x)<=0)high.pop();high.push(x)});return low.slice(0,-1).concat(high.slice(0,-1));}
 function polygonShadow(coords,height,sun){if(sun.alt<=0)return null;const d=Math.min(height/Math.tan(rad(sun.alt)),260),east=Math.sin(rad(sun.az+180))*d,north=Math.cos(rad(sun.az+180))*d,a=coords.map(([lng,lat])=>[lat,lng]),b=a.map(p=>move(p[0],p[1],east,north));return hull([...a,...b]);}
-function icon(kind){const symbol=kind==='tree'?'♣':kind==='shower'?'🚿':kind==='toilet'?'🚻':kind==='parking'?'P':kind==='attraction'?'★':'▣';return L.divIcon({className:'',html:`<div class="facility-icon ${kind==='tree'?'tree-icon':kind==='building'?'building-icon':''}">${symbol}</div>`,iconSize:[30,30],iconAnchor:[15,15]});}
+function icon(kind){if(kind==='starbucks')return L.divIcon({className:'starbucks-marker',html:'<img src="assets/starbucks-logo.png" alt="Starbucks" style="display:block!important;width:34px!important;height:34px!important;max-width:34px!important;max-height:34px!important;border:2px solid #fff!important;border-radius:50%!important;box-shadow:0 2px 7px #1238!important;">',iconSize:[34,34],iconAnchor:[17,17]});const symbol=kind==='tree'?'♣':kind==='shower'?'🚿':kind==='toilet'?'🚻':kind==='parking'?'P':kind==='beach'?'⌁':kind==='cafe'?'☕':kind==='attraction'?'★':'▣';return L.divIcon({className:'',html:`<div class="facility-icon ${kind==='tree'?'tree-icon':kind==='building'?'building-icon':''}">${symbol}</div>`,iconSize:[30,30],iconAnchor:[15,15]});}
 function visible(f){const search=document.querySelector('#search').value.trim(),categories=f.categories||[f.category];return f.site===place&&(selected.has('전체')||categories.some(c=>selected.has(c)))&&f.name.includes(search);}
 function showDetail(f){const shade=Boolean(f.height),kindName=f.kind==='shower'?'샤워장':f.kind==='toilet'?'화장실':f.kind==='parking'?'주차장':f.kind,note=shade?(f.demoHeight?'나무 높이는 현재 시연용 8m입니다. 실제 높이를 조사하면 바꿉니다.':'팀이 조사한 그늘 좌표를 사용했습니다.'):'등록된 위치 정보입니다.';document.querySelector('#detail').hidden=false;document.querySelector('#detail').innerHTML=`<div class="detail-top"><div><h2>${f.name}</h2><span class="tag">${f.category} · ${kindName}</span></div><button class="close" aria-label="닫기">×</button></div><div class="info"><div><span>현재 상태</span><strong>${shade?'예상 그늘 표시':'시설 위치 표시'}</strong></div><div><span>${shade?'구조물 높이':'이용요금'}</span><strong>${shade?`${f.height}m`:f.fee||'무료'}</strong></div><div><span>거리</span><strong>내 위치 확인 후 표시</strong></div><div><span>도보시간</span><strong>길찾기 연결 예정</strong></div></div><button class="route">길찾기 준비 중</button><p class="note">${note}</p>`;document.querySelector('.close').onclick=()=>document.querySelector('#detail').hidden=true;}
 function chosenTime(){const date=document.querySelector('#shadeDate').value.split('-').map(Number),minutes=Number(document.querySelector('#shadeSlider').value);return new Date(date[0],date[1]-1,date[2],Math.floor(minutes/60),minutes%60);}
@@ -87,8 +107,8 @@ map=L.map('map',{zoomControl:false}).setView([35.156,129.139],12);L.control.zoom
   (()=>{
     var appLanguage=localStorage.getItem('badaEodiLang')||'ko',plannedRoute=null;
     var mapCopy={ko:{ko:'한국어',en:'English',locate:'현재 위치',plan:'하루 경로',planTitle:'해안 관광 하루 코스',planLead:'출발 주차장과 해변 또는 관광명소를 고르면, 다시 주차장으로 돌아오는 순서를 추천합니다.',parking:'출발 주차장',destination:'해변 또는 관광명소',beach:'해변',build:'경로 만들기',cancel:'경로 취소',distance:'예상 도보 거리',time:'예상 도보 시간',notice:'※ 현재는 시설 위치를 잇는 시연용 경로입니다. 실제 도보 길은 길찾기 API 연결 후 적용할 수 있습니다.',choose:'관광지 선택',info:'보고 싶은 정보를 골라 보세요.',search:'시설 이름 검색',shade:'날짜와 시간에 따른 그늘',all:'전체'},en:{ko:'한국어',en:'English',locate:'My location',plan:'Day route',planTitle:'Beach day planner',planLead:'Choose a starting parking lot and a beach or attraction. We will suggest a return-to-parking itinerary.',parking:'Starting parking',destination:'Beach or attraction',beach:'Beach',build:'Build route',cancel:'Clear route',distance:'Estimated walking distance',time:'Estimated walking time',notice:'Demo route: this connects facility locations. Road-based walking directions can be added after a routing API is connected.',choose:'Choose area',info:'Choose what to show',search:'Search facilities',shade:'Shade by date and time',all:'All'}};
-    function catLabel(c){if(appLanguage!=='en')return c;return({'전체':'All','주차장':'Parking','샤워시설':'Showers','세족장':'Foot wash','족욕장':'Foot bath','화장실':'Restrooms','그늘':'Shade','안전시설':'Safety','관광명소':'Attractions'})[c]||c;}
-    function displayName(f){if(appLanguage!=='en')return f.name;var base=f.kind==='parking'?'Parking facility':f.kind==='shower'?'Shower facility':f.kind==='toilet'?'Public restroom':f.kind==='attraction'?'Tourist attraction':f.kind==='tree'?'Street tree':f.category==='그늘'?'Shaded area':f.name;return base;}
+    function catLabel(c){if(appLanguage!=='en')return c;return({'전체':'All','주차장':'Parking','샤워시설':'Showers','세족장':'Foot wash','화장실':'Restrooms','그늘':'Shade','관광명소':'Attractions','카페':'Cafes'})[c]||c;}
+    function displayName(f){if(appLanguage!=='en')return f.name;var base=f.kind==='parking'?'Parking facility':f.kind==='shower'?'Shower facility':f.kind==='toilet'?'Public restroom':f.kind==='beach'?(f.infoEn?.includes('Haeundae')?'Haeundae Beach':'Gwangalli Beach'):f.kind==='cafe'||f.kind==='starbucks'?'Cafe':f.kind==='attraction'?'Tourist attraction':f.kind==='tree'?'Street tree':f.category==='그늘'?'Shaded area':f.name;return base;}
     function setMapLanguage(lang){appLanguage=lang;localStorage.setItem('badaEodiLang',lang);document.documentElement.lang=lang;var t=mapCopy[lang],brand=document.querySelector('.brand');brand.innerHTML='<img src="assets/bada-eodi-logo.svg" alt=""><div><small>BUSAN MARINE TOURISM</small><strong>'+ (lang==='en'?'Bada Eodi':'바다어디') +'</strong></div>';document.querySelector('#locate').textContent=t.locate;document.querySelector('.plan-toggle').textContent=t.plan;document.querySelectorAll('.map-language button').forEach(b=>b.classList.toggle('active',b.dataset.mapLang===lang));document.querySelectorAll('.section-title')[0].textContent=t.choose;document.querySelectorAll('.section-title')[1].textContent=t.info;document.querySelector('[data-place="haeundae"]').textContent=lang==='en'?'Haeundae':'해운대';document.querySelector('[data-place="gwangalli"]').textContent=lang==='en'?'Gwangalli':'광안리';document.querySelector('#search').placeholder=t.search;document.querySelector('.shade-card strong').textContent=t.shade;document.querySelector('.gate-box h2').textContent=lang==='en'?'Where would you like to go?':'어디로 떠나볼까?';document.querySelector('.place-choice.gwangalli strong').textContent=lang==='en'?'Gwangalli':'광안리';document.querySelector('.place-choice.haeundae strong').textContent=lang==='en'?'Haeundae':'해운대';buildChips();buildPlanner();}
     function haversine(a,b){var r=6371,la=a[0]*Math.PI/180,lb=b[0]*Math.PI/180,dl=(b[0]-a[0])*Math.PI/180,do_=(b[1]-a[1])*Math.PI/180;var h=Math.sin(dl/2)**2+Math.cos(la)*Math.cos(lb)*Math.sin(do_/2)**2;return 2*r*Math.asin(Math.sqrt(h));}
     function buildPlanner(){var t=mapCopy[appLanguage],panel=document.querySelector('#itineraryPanel');var parks=POINTS.filter(p=>p.site===place&&p.kind==='parking'),attractions=POINTS.filter(p=>p.site===place&&p.kind==='attraction');panel.innerHTML='<h3>'+t.planTitle+'</h3><p>'+t.planLead+'</p><label>'+t.parking+'</label><select id="planParking">'+parks.map((p,i)=>'<option value="'+i+'">'+displayName(p)+(appLanguage==='en'?' '+(i+1):'')+'</option>').join('')+'</select><label>'+t.destination+'</label><select id="planDestination"><option value="beach">'+(appLanguage==='en'?(place==='haeundae'?'Haeundae Beach':'Gwangalli Beach'):(place==='haeundae'?'해운대 해수욕장':'광안리 해수욕장'))+'</option>'+attractions.map((p,i)=>'<option value="a'+i+'">'+displayName(p)+'</option>').join('')+'</select><div class="plan-actions"><button class="plan-build" id="planBuild">'+t.build+'</button><button class="plan-cancel" id="planCancel">'+t.cancel+'</button></div><div class="plan-result" id="planResult" hidden></div>';document.querySelector('#planBuild').onclick=()=>{var parking=parks[Number(document.querySelector('#planParking').value)],v=document.querySelector('#planDestination').value,dest=v==='beach'?{point:SITES[place].center}:attractions[Number(v.slice(1))];if(plannedRoute)map.removeLayer(plannedRoute);plannedRoute=L.polyline([parking.point,dest.point,parking.point],{color:'#087eaf',weight:5,opacity:.86,dashArray:'10 8'}).addTo(map);var km=haversine(parking.point,dest.point)*2,mins=Math.max(1,Math.round(km/4.5*60));var result=document.querySelector('#planResult');result.hidden=false;result.innerHTML='<b>'+t.distance+': '+km.toFixed(1)+' km</b><br>'+t.time+': '+mins+' min<br><span>'+t.notice+'</span>';map.fitBounds(plannedRoute.getBounds(),{padding:[70,70]});};document.querySelector('#planCancel').onclick=()=>{if(plannedRoute){map.removeLayer(plannedRoute);plannedRoute=null;}document.querySelector('#planResult').hidden=true;};}
@@ -105,5 +125,270 @@ map=L.map('map',{zoomControl:false}).setView([35.156,129.139],12);L.control.zoom
 </script >
 <script>
 </script >
+<script>
+  /* 승인 없이 쓰는 OpenStreetMap 보행 경로: 시연용 소규모 호출에만 사용합니다. */
+  (()=>{
+    const language=()=>localStorage.getItem('badaEodiLang')||'ko';
+    const message=(ko,en)=>language()==='en'?en:ko;
+    const routeStyle={color:'#087eaf',weight:6,opacity:.92,lineJoin:'round'};
+    const weatherState={loaded:false,raining:false,sky:0,temperature:null,shadeFactor:1,textKo:'',textEn:'',icon:'🌤️'};
+    const weatherWidget=document.createElement('div');
+    weatherWidget.className='weather-widget';
+    weatherWidget.innerHTML='<span>🌤️</span><div><strong>날씨 확인 중</strong><small>실시간 모델 날씨</small></div>';
+    document.querySelector('header').insertBefore(weatherWidget,document.querySelector('.locate'));
+    function weatherDescription(code,raining){
+      if(raining)return code>=71&&code<=77?['눈','Snow','🌨️']:code>=95?['뇌우','Thunderstorm','⛈️']:['비','Rain','🌧️'];
+      if(code===0)return['맑음','Clear','☀️'];if(code<=2)return['구름 조금','Partly cloudy','⛅'];if(code===3)return['흐림','Cloudy','☁️'];if(code===45||code===48)return['안개','Fog','🌫️'];return['구름 많음','Cloudy','☁️'];
+    }
+    function drawWeatherWidget(){
+      const en=language()==='en',temperature=Number.isFinite(weatherState.temperature)?`${weatherState.temperature.toFixed(1)}°C · `:'';
+      weatherWidget.className=`weather-widget ${weatherState.raining?'rainy':weatherState.sky==='1'?'sunny':'cloudy'}`;
+      weatherWidget.innerHTML=`<span>${weatherState.icon}</span><div><strong>${temperature}${en?weatherState.textEn:weatherState.textKo}</strong><small>Open-Meteo</small></div>`;
+      let note=document.querySelector('#weatherShadeNote');
+      if(!note){note=document.createElement('span');note.id='weatherShadeNote';note.style.cssText='display:block;margin-top:7px;font-weight:800';document.querySelector('.shade-card').append(note);}
+      note.textContent=weatherState.raining?message('비·눈으로 예상 그늘을 숨겼습니다.','Estimated shade is hidden because of rain or snow.'):weatherState.shadeFactor<1?message('구름량을 반영해 그늘 농도를 낮췄습니다.','Shade intensity is reduced based on cloud cover.'):message('맑은 날씨를 반영한 예상 그늘입니다.','Estimated shade reflects clear weather.');
+    }
+    function applyWeatherShade(){
+      if(!weatherState.loaded)return;
+      if(weatherState.raining){shadeLayer.clearLayers();return;}
+      shadeLayer.eachLayer(layer=>layer.setStyle?.({opacity:.48*weatherState.shadeFactor,fillOpacity:.48*weatherState.shadeFactor}));
+    }
+    const renderWithoutWeather=render;
+    render=function(){renderWithoutWeather();applyWeatherShade();};
+    document.querySelector('#shadeSlider').addEventListener('input',()=>setTimeout(applyWeatherShade,0));
+    document.querySelector('#shadeDate').addEventListener('change',()=>setTimeout(applyWeatherShade,0));
+    let shadeUsesCurrentTime=true;
+    const shadeMode=document.createElement('small');shadeMode.id='shadeMode';shadeMode.style.cssText='display:block;margin-top:5px;color:#816b41;font-weight:800';document.querySelector('#shadeControls').append(shadeMode);
+    const localDateValue=date=>`${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
+    function updateShadeMode(){shadeMode.textContent=shadeUsesCurrentTime?message('● 현재 시각을 자동 반영 중','● Following the current time'):message('○ 선택한 날짜·시간 기준','○ Using the selected date and time');}
+    function syncShadeToCurrentTime(){
+      if(!shadeUsesCurrentTime)return;
+      const now=new Date();document.querySelector('#shadeDate').value=localDateValue(now);document.querySelector('#shadeSlider').value=Math.floor((now.getHours()*60+now.getMinutes())/5)*5;render();updateShadeMode();
+    }
+    document.querySelector('#shadeSlider').addEventListener('input',()=>{shadeUsesCurrentTime=false;updateShadeMode();});
+    document.querySelector('#shadeDate').addEventListener('change',()=>{shadeUsesCurrentTime=false;updateShadeMode();});
+    document.querySelector('#now').addEventListener('click',()=>{shadeUsesCurrentTime=true;setTimeout(syncShadeToCurrentTime,0);});
+    syncShadeToCurrentTime();setInterval(syncShadeToCurrentTime,60*1000);
+    async function loadWeather(){
+      const location=SITES[place].center,params=new URLSearchParams({latitude:String(location[0]),longitude:String(location[1]),current:'temperature_2m,precipitation,rain,showers,snowfall,weather_code,cloud_cover,is_day',timezone:'Asia/Seoul'});
+      try{
+        const response=await fetch(`https://api.open-meteo.com/v1/forecast?${params}`),data=await response.json(),current=data.current;
+        if(!response.ok||!current)throw new Error(data.reason||`Weather ${response.status}`);
+        const precipitation=Number(current.precipitation||0)+Number(current.rain||0)+Number(current.showers||0)+Number(current.snowfall||0),cloudCover=Number(current.cloud_cover||0),code=Number(current.weather_code||0),raining=precipitation>0,sky=cloudCover<=25?'1':cloudCover<=65?'3':'4',description=weatherDescription(code,raining);
+        weatherState.loaded=true;weatherState.raining=raining;weatherState.sky=sky;weatherState.temperature=Number(current.temperature_2m);weatherState.shadeFactor=raining?0:cloudCover<=25?1:cloudCover<=65?0.55:0.18;weatherState.textKo=description[0];weatherState.textEn=description[1];weatherState.icon=description[2];
+        drawWeatherWidget();render();refreshBeachPlanner();
+      }catch(error){weatherWidget.innerHTML=`<span>⚠️</span><div><strong>${message('날씨 연결 실패','Weather unavailable')}</strong><small>${error.message}</small></div>`;}
+    }
+    const BEACHES={
+      haeundae:{name:'해운대 해수욕장',nameEn:'Haeundae Beach',point:[35.1585779,129.1619500]},
+      gwangalli:{name:'광안리 해수욕장',nameEn:'Gwangalli Beach',point:[35.1534752,129.1190863]}
+    };
+    const stopCandidates=()=>POINTS.filter(point=>point.site===place&&(point.categories||[point.category]).some(category=>category==='세족장'||category==='샤워시설'));
+    const tripDestinations=()=>POINTS.filter(point=>point.site===place&&(point.category==='카페'||point.category==='관광명소')&&point.kind!=='beach');
+    const straightDistance=(a,b)=>{const r=6371,la=a[0]*Math.PI/180,lb=b[0]*Math.PI/180,dl=(b[0]-a[0])*Math.PI/180,do_=(b[1]-a[1])*Math.PI/180,h=Math.sin(dl/2)**2+Math.cos(la)*Math.cos(lb)*Math.sin(do_/2)**2;return 2*r*Math.asin(Math.sqrt(h));};
+    function recommendedStop(beach,destination){
+      return stopCandidates().map(stop=>({stop,score:straightDistance(beach.point,stop.point)+straightDistance(stop.point,destination.point)})).sort((a,b)=>a.score-b.score)[0]?.stop;
+    }
+    function weatherRecommendedDestination(destinations,beach){
+      let preferred=destinations;
+      if(weatherState.loaded&&weatherState.raining)preferred=destinations.filter(point=>point.category==='카페');
+      else if(weatherState.loaded&&weatherState.sky==='1')preferred=destinations.filter(point=>point.category==='관광명소');
+      else if(weatherState.loaded&&weatherState.sky==='4')preferred=destinations.filter(point=>point.category==='카페');
+      if(!preferred.length)preferred=destinations;
+      return[...preferred].sort((a,b)=>straightDistance(beach.point,a.point)-straightDistance(beach.point,b.point))[0];
+    }
+    function weatherRecommendationReason(){
+      if(!weatherState.loaded)return message('날씨 연결 후 추천 코스가 자동으로 바뀝니다.','The suggested course changes when weather data is connected.');
+      if(weatherState.raining)return message('비·눈을 피해 카페 중심으로 추천했어요.','Cafe-focused course suggested to avoid rain or snow.');
+      if(weatherState.sky==='1')return message('맑은 날씨에 맞춰 관광명소 중심으로 추천했어요.','Attraction-focused course suggested for clear weather.');
+      return message('흐린 날씨를 고려해 가까운 실내 장소를 우선했어요.','Nearby indoor places are prioritized for cloudy weather.');
+    }
+    function showRouteSummary({meters,minutes,beach,stop,destination}){
+      let summary=document.querySelector('#routeSummary');
+      if(!summary){summary=document.createElement('section');summary.id='routeSummary';summary.className='route-summary';document.querySelector('main').append(summary);}
+      const en=language()==='en',steps=Math.round(meters/.7),stopName=en?(stop.kind==='shower'?'Shower facility':'Foot wash facility'):stop.name;
+      summary.innerHTML=`<div class="route-summary-top"><div><h3>${en?'Your route is ready':'오늘의 경로가 완성됐어요'}</h3><p>${en?`${beach.nameEn} → ${stopName} → ${destination.name}`:`${beach.name} → ${stopName} → ${destination.name}`}</p></div><button class="close" id="routeSummaryClose" aria-label="${en?'Close':'닫기'}">×</button></div><div class="route-color-legend"><span><i class="route-color-dot"></i>${en?'Outbound':'가는 길'}</span><span><i class="route-color-dot returning"></i>${en?'Return':'오는 길'}</span></div><div class="route-summary-grid"><div><span>${en?'Distance':'도보 거리'}</span><strong>${(meters/1000).toFixed(1)} km</strong></div><div><span>${en?'Steps':'예상 걸음 수'}</span><strong>${steps.toLocaleString()}${en?'':'걸음'}</strong></div><div><span>${en?'Time':'예상 이동시간'}</span><strong>${minutes}${en?' min':'분'}</strong></div></div><button class="route-summary-cancel" id="routeSummaryCancel">${en?'Cancel route':'경로 취소'}</button>`;
+      summary.hidden=false;
+      window.activeRouteSummary=summary;
+      const guideButton=document.querySelector('.plan-toggle');guideButton.classList.add('has-active-route');guideButton.textContent=en?'Route guide':'경로 안내';guideButton.title=en?'Open the current route guide':'현재 경로 안내 다시 열기';
+      summary.querySelector('#routeSummaryClose').onclick=()=>{summary.hidden=true;guideButton.classList.add('has-active-route');};
+      summary.querySelector('#routeSummaryCancel').onclick=()=>{clearRoutes();summary.hidden=true;};
+    }
+    function showLocationRouteSummary({meters,minutes,destinationName}){
+      let summary=document.querySelector('#routeSummary');
+      if(!summary){summary=document.createElement('section');summary.id='routeSummary';summary.className='route-summary';document.querySelector('main').append(summary);}
+      const en=language()==='en',steps=Math.round(meters/.7);
+      summary.innerHTML=`<div class="route-summary-top"><div><h3>${en?'Route tracking':'현재 위치에서 경로 안내'}</h3><p>${en?`My location → ${destinationName}`:`내 위치 → ${destinationName}`}</p></div><button class="close" id="routeSummaryClose" aria-label="${en?'Close':'닫기'}">×</button></div><div class="route-summary-grid"><div><span>${en?'Distance':'도보 거리'}</span><strong>${(meters/1000).toFixed(1)} km</strong></div><div><span>${en?'Steps':'예상 걸음 수'}</span><strong>${steps.toLocaleString()}${en?'':'걸음'}</strong></div><div><span>${en?'Time':'예상 도보시간'}</span><strong>${minutes}${en?' min':'분'}</strong></div></div><button class="route-summary-cancel" id="routeSummaryCancel">${en?'Cancel route':'경로 취소'}</button>`;
+      summary.hidden=false;window.activeRouteSummary=summary;
+      const guideButton=document.querySelector('.plan-toggle');guideButton.classList.add('has-active-route');guideButton.textContent=en?'Route guide':'경로 안내';guideButton.title=en?'Open the current route guide':'현재 경로 안내 다시 열기';
+      summary.querySelector('#routeSummaryClose').onclick=()=>summary.hidden=true;
+      summary.querySelector('#routeSummaryCancel').onclick=()=>{clearRoutes();summary.hidden=true;};
+    }
+    function buildBeachPlanner(){
+      const panel=document.querySelector('#itineraryPanel');if(!panel)return;
+      const parks=POINTS.filter(point=>point.site===place&&point.kind==='parking'),destinations=tripDestinations(),beach=BEACHES[place],en=language()==='en';
+      const recommendation=destination=>{const stop=recommendedStop(beach,destination);return stop?(en?`Recommended after the beach: ${stop.kind==='shower'?'Shower facility':'Foot wash facility'}`:`해수욕장 다음 추천: ${stop.name}`):(en?'No foot-wash or shower location has been added yet.':'세족장 또는 샤워시설 좌표가 아직 없습니다.');};
+      const todayDestination=weatherRecommendedDestination(destinations,beach),todayStop=todayDestination&&recommendedStop(beach,todayDestination),todayCourse=todayDestination&&todayStop?(en?`${beach.nameEn} → ${todayStop.kind==='shower'?'Shower facility':'Foot wash facility'} → ${todayDestination.name}`:`${beach.name} → ${todayStop.name} → ${todayDestination.name}`):'';
+      panel.innerHTML=`<h3>${en?'Beach day planner':'해안 관광 하루 코스'}</h3><section class="today-course"><b>${en?"Today's recommended course":"오늘의 추천 코스"}</b><p>${todayCourse||message('추천할 장소를 준비 중입니다.','Preparing a suggested course.')}<br>${weatherRecommendationReason()}</p></section><p>${en?'Set your own route below.':'아래에서 원하는 코스를 직접 선택해 보세요.'}</p><label>${en?'Starting parking':'출발 주차장'}</label><select id="planParking">${parks.map((point,index)=>`<option value="${index}">${en?'Parking ':''}${en?index+1:point.name}</option>`).join('')}</select><label>${en?'Beach':'해수욕장'}</label><div class="plan-fixed-stop">${en?beach.nameEn:beach.name}</div><label>${en?'Place to visit':'들르고 싶은 관광지 또는 카페'}</label><select id="planDestination">${destinations.map((point,index)=>`<option value="${index}">${point.name}</option>`).join('')}</select><div class="plan-recommendation" id="planRecommendation">${destinations[0]?recommendation(destinations[0]):''}</div><div class="plan-actions"><button class="plan-build" id="planBuild" ${destinations.length?'':'disabled'}>${en?'Build route':'경로 만들기'}</button><button class="plan-cancel" id="planCancel">${en?'Clear route':'경로 취소'}</button></div><div class="plan-result" id="planResult" hidden></div>`;
+      document.querySelector('#planDestination')?.addEventListener('change',event=>{const selected=destinations[Number(event.target.value)];document.querySelector('#planRecommendation').textContent=recommendation(selected);});
+    }
+    const previousShowDetail=showDetail;
+    showDetail=function(f){
+      previousShowDetail(f);
+      const routeButton=document.querySelector('#detail .route');
+      if(routeButton&&f.point){routeButton.dataset.lat=f.point[0];routeButton.dataset.lng=f.point[1];routeButton.textContent=message('경로 추적','Track route');}
+      const extraInfo=language()==='en'?(f.infoEn||f.info):f.info;
+      if(extraInfo)document.querySelector('#detail').insertAdjacentHTML('beforeend',`<p class="note facility-extra-info">${extraInfo}</p>`);
+      if(f.kind==='cafe'||f.kind==='starbucks'){
+        const tag=document.querySelector('#detail .tag');if(tag)tag.textContent=language()==='en'?'Cafe':'카페';
+        document.querySelector('#detail .info')?.remove();
+        document.querySelector('#detail .facility-extra-info')?.remove();
+        document.querySelector('#detail .route + .note')?.remove();
+        const menu=language()==='en'?(f.menuEn||f.menu):f.menu;
+        const rows=(menu||[]).map(([name,price])=>`<div class="menu-item"><span>${name}</span><b>${price}</b></div>`).join('');
+        document.querySelector('#detail .route')?.insertAdjacentHTML('beforebegin',`<section class="menu-board"><h3>${language()==='en'?'Featured menu':'대표 메뉴'}</h3>${rows}</section>`);
+      }
+    };
+
+    function showCurrentPosition(point,label){
+      currentPosition=point;
+      if(userMarker)map.removeLayer(userMarker);
+      userMarker=L.circleMarker(point,{radius:9,color:'#fff',weight:3,fillColor:'#ef4937',fillOpacity:1})
+        .addTo(map).bindTooltip(label||message('내 위치','My location'),{permanent:true,direction:'top'});
+    }
+    window.setCurrentLocation=showCurrentPosition;
+
+    async function valhallaWalkingRoute(from,to){
+      const response=await fetch('https://valhalla1.openstreetmap.de/route',{
+        method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({locations:[{lat:from[0],lon:from[1]},{lat:to[0],lon:to[1]}],costing:'pedestrian',units:'kilometers'})
+      });
+      if(!response.ok)throw new Error(`walking server ${response.status}`);
+      const data=await response.json(),trip=data.trip;
+      if(!trip?.geometry)throw new Error('route data is unavailable');
+      return {path:decodePolyline(trip.geometry,6),distance:trip.summary.length*1000,duration:trip.summary.time};
+    }
+    function decodePolyline(encoded,precision){
+      let index=0,lat=0,lng=0,points=[],factor=Math.pow(10,precision);
+      while(index<encoded.length){
+        let value=0,shift=0,byte;
+        do{byte=encoded.charCodeAt(index++)-63;value|=(byte&31)<<shift;shift+=5;}while(byte>=32);
+        lat+=(value&1)?~(value>>1):(value>>1);value=0;shift=0;
+        do{byte=encoded.charCodeAt(index++)-63;value|=(byte&31)<<shift;shift+=5;}while(byte>=32);
+        lng+=(value&1)?~(value>>1):(value>>1);points.push([lat/factor,lng/factor]);
+      }
+      return points;
+    }
+    async function osrmFootFallback(from,to){
+      const url=`https://routing.openstreetmap.de/routed-foot/route/v1/driving/${from[1]},${from[0]};${to[1]},${to[0]}?overview=full&geometries=geojson`;
+      const response=await fetch(url),data=await response.json(),route=data.routes?.[0];
+      if(!response.ok||!route)throw new Error('walking server is unavailable');
+      return {path:route.geometry.coordinates.map(([lng,lat])=>[lat,lng]),distance:route.distance,duration:route.duration};
+    }
+    window.badaEodiFootRoute=async(from,to)=>{
+      try{return await valhallaWalkingRoute(from,to);}
+      catch(firstError){try{return await osrmFootFallback(from,to);}catch(secondError){throw new Error(message('보행 경로 서버에 연결하지 못했습니다. 잠시 후 다시 시도해 주세요.','Could not connect to the walking-route server. Please try again.'));}}
+    };
+    function highlightCourse(points){
+      if(!window.courseHighlightLayer)window.courseHighlightLayer=L.layerGroup().addTo(map);
+      window.courseHighlightLayer.clearLayers();
+      points.forEach((item,index)=>L.marker(item.point,{zIndexOffset:1000,icon:L.divIcon({className:'',html:`<div class="course-highlight-marker">${index+1}</div>`,iconSize:[40,40],iconAnchor:[20,20]})}).bindTooltip(item.name,{direction:'top',offset:[0,-18]}).addTo(window.courseHighlightLayer));
+    }
+    function offsetRoute(path,meters){
+      return path.map((point,index)=>{const previous=path[Math.max(0,index-1)],next=path[Math.min(path.length-1,index+1)],latitude=point[0]*Math.PI/180,north=(next[0]-previous[0])*111320,east=(next[1]-previous[1])*111320*Math.cos(latitude),length=Math.hypot(east,north)||1,offsetEast=-north/length*meters,offsetNorth=east/length*meters;return[point[0]+offsetNorth/111320,point[1]+offsetEast/(111320*Math.cos(latitude))];});
+    }
+    function showDirectionArrows(path,type='outbound',reset=true){
+      if(!window.routeArrowLayer)window.routeArrowLayer=L.layerGroup().addTo(map);
+      if(reset)window.routeArrowLayer.clearLayers();
+      if(path.length<3)return;
+      const interval=Math.max(2,Math.floor(path.length/12));
+      for(let index=interval;index<path.length-1;index+=interval){
+        const from=path[index],to=path[Math.min(index+2,path.length-1)],lat1=from[0]*Math.PI/180,lat2=to[0]*Math.PI/180,deltaLng=(to[1]-from[1])*Math.PI/180;
+        const bearing=(Math.atan2(Math.sin(deltaLng)*Math.cos(lat2),Math.cos(lat1)*Math.sin(lat2)-Math.sin(lat1)*Math.cos(lat2)*Math.cos(deltaLng))*180/Math.PI+360)%360;
+        L.marker(from,{interactive:false,zIndexOffset:900,icon:L.divIcon({className:'',html:`<div class="route-direction-arrow ${type}" style="transform:rotate(${bearing-90}deg)">➤</div>`,iconSize:[22,22],iconAnchor:[11,11]})}).addTo(window.routeArrowLayer);
+      }
+    }
+    function clearRoutes(){
+      ['badaRouteLayer','singleRouteLayer'].forEach(key=>{if(window[key]){map.removeLayer(window[key]);window[key]=null;}});
+      if(window.courseHighlightLayer)window.courseHighlightLayer.clearLayers();
+      if(window.routeArrowLayer)window.routeArrowLayer.clearLayers();
+      const result=document.querySelector('#planResult');if(result)result.hidden=true;
+      const summary=document.querySelector('#routeSummary');if(summary)summary.hidden=true;
+      window.activeRouteSummary=null;
+      const guideButton=document.querySelector('.plan-toggle');if(guideButton){guideButton.classList.remove('has-active-route');guideButton.textContent=message('하루 경로','Day route');guideButton.removeAttribute('title');}
+    }
+    document.querySelector('#locate').onclick=()=>navigator.geolocation?.getCurrentPosition(position=>{
+      showCurrentPosition([position.coords.latitude,position.coords.longitude]);map.flyTo(currentPosition,16);
+    },()=>alert(message('브라우저에서 위치 권한을 허용해 주세요. 또는 지도에서 마우스 오른쪽 버튼을 눌러 임의 위치를 설정할 수 있어요.','Allow location permission in your browser, or right-click the map to set a demo location.')));
+    map.on('contextmenu',event=>{
+      showCurrentPosition([event.latlng.lat,event.latlng.lng],message('임의로 설정한 현재 위치','Demo location'));
+      alert(message('이 지점을 현재 위치로 설정했어요. 시설을 눌러 길찾기를 해 보세요.','This point is now your location. Select a facility to find a route.'));
+    });
+    const refreshBeachPlanner=()=>setTimeout(()=>{const panel=document.querySelector('#itineraryPanel');if(panel&&!panel.hidden)buildBeachPlanner();},0);
+    document.querySelector('.plan-toggle').addEventListener('click',refreshBeachPlanner);
+    document.querySelectorAll('.place,.map-language button').forEach(button=>button.addEventListener('click',refreshBeachPlanner));
+
+    window.addEventListener('click',async event=>{
+      const guideToggle=event.target.closest('.plan-toggle');
+      if(guideToggle&&(window.badaRouteLayer||window.singleRouteLayer)&&window.activeRouteSummary){
+        event.preventDefault();event.stopPropagation();
+        document.querySelector('#itineraryPanel').hidden=true;
+        window.activeRouteSummary.hidden=!window.activeRouteSummary.hidden;
+        return;
+      }
+      const build=event.target.closest('#planBuild'),cancel=event.target.closest('#planCancel');
+      if(cancel){event.preventDefault();event.stopPropagation();clearRoutes();return;}
+      if(!build)return;
+      event.preventDefault();event.stopPropagation();
+      const parks=POINTS.filter(p=>p.site===place&&p.kind==='parking'),destinations=tripDestinations();
+      const parking=parks[Number(document.querySelector('#planParking').value)],beach=BEACHES[place],destination=destinations[Number(document.querySelector('#planDestination').value)],stop=recommendedStop(beach,destination),result=document.querySelector('#planResult');
+      build.disabled=true;build.textContent=message('길 찾는 중...','Finding route...');
+      try{
+        const [toBeach,toStop,toDestination,returning]=await Promise.all([window.badaEodiFootRoute(parking.point,beach.point),window.badaEodiFootRoute(beach.point,stop.point),window.badaEodiFootRoute(stop.point,destination.point),window.badaEodiFootRoute(destination.point,parking.point)]);
+        const outboundPath=[...toBeach.path,...toStop.path,...toDestination.path],returnPath=offsetRoute(returning.path,3);
+        clearRoutes();window.badaRouteLayer=L.featureGroup([L.polyline(outboundPath,routeStyle),L.polyline(returnPath,{...routeStyle,color:'#e25a4f'})]).addTo(map);showDirectionArrows(outboundPath,'outbound',true);showDirectionArrows(returnPath,'returning',false);
+        highlightCourse([{point:parking.point,name:parking.name},beach,{point:stop.point,name:stop.name},{point:destination.point,name:destination.name}]);
+        const meters=toBeach.distance+toStop.distance+toDestination.distance+returning.distance,minutes=Math.ceil((toBeach.duration+toStop.duration+toDestination.duration+returning.duration)/60);
+        document.querySelector('#itineraryPanel').hidden=true;
+        showRouteSummary({meters,minutes,beach,stop,destination});
+        map.fitBounds(window.badaRouteLayer.getBounds(),{padding:[70,70]});
+      }catch(error){result.hidden=false;result.innerHTML=`<b>${message('도보 경로를 불러오지 못했습니다.','Walking route could not be loaded.')}</b><br><span>${error.message}</span>`;}
+      finally{build.disabled=false;build.textContent=message('경로 만들기','Build route');}
+    },true);
+
+    document.addEventListener('click',async event=>{
+      const button=event.target.closest('.route');if(!button)return;
+      event.preventDefault();
+      const title=document.querySelector('#detail h2')?.textContent||message('선택한 시설','Selected facility');
+      const target=button.dataset.lat?{point:[Number(button.dataset.lat),Number(button.dataset.lng)]}:(POINTS.find(point=>point.site===place&&point.name===title)||FACILITIES.find(item=>item.site===place&&item.name===title));
+      if(!target?.point)return;
+      if(!currentPosition){alert(message('먼저 오른쪽 위 현재 위치 버튼을 눌러 주세요. 위치 권한이 어려우면 지도에서 마우스 오른쪽 버튼을 눌러 임의 위치를 설정할 수 있어요.','Set your location first. If permission is unavailable, right-click the map to set a demo location.'));return;}
+      button.disabled=true;button.textContent=message('길 찾는 중...','Finding route...');
+      try{
+        const route=await window.badaEodiFootRoute(currentPosition,target.point);clearRoutes();window.singleRouteLayer=L.polyline(route.path,routeStyle).addTo(map);showDirectionArrows(route.path);
+        const distance=(route.distance/1000).toFixed(1),minutes=Math.ceil(route.duration/60),info=document.querySelector('#detail .info');
+        if(info){info.children[2].querySelector('strong').textContent=`${distance} km`;info.children[3].querySelector('strong').textContent=`${minutes} ${language()==='en'?'min':'분'}`;}
+        highlightCourse([{point:currentPosition,name:message('내 위치','My location')},{point:target.point,name:title}]);
+        document.querySelector('#detail').hidden=true;showLocationRouteSummary({meters:route.distance,minutes,destinationName:title});
+        map.fitBounds(window.singleRouteLayer.getBounds(),{padding:[70,70]});
+      }catch(error){alert(error.message);}
+      finally{button.disabled=false;button.textContent=message('경로 추적','Track route');}
+    },true);
+    const sidebar=document.querySelector('.sidebar'),sidebarContent=document.createElement('div'),sidebarToggle=document.createElement('button');
+    sidebarContent.className='sidebar-content';[...sidebar.childNodes].forEach(node=>sidebarContent.append(node));
+    sidebarToggle.type='button';sidebarToggle.className='sidebar-toggle';sidebarToggle.textContent='‹';sidebarToggle.setAttribute('aria-expanded','true');
+    sidebar.append(sidebarToggle,sidebarContent);
+    const updateSidebarToggle=()=>{const collapsed=sidebar.classList.contains('collapsed');sidebarToggle.textContent=collapsed?'☰':'‹';sidebarToggle.title=collapsed?message('카테고리 화면 열기','Open categories'):message('카테고리 화면 접기','Collapse categories');sidebarToggle.setAttribute('aria-expanded',String(!collapsed));};
+    sidebarToggle.onclick=()=>{sidebar.classList.toggle('collapsed');updateSidebarToggle();};
+    updateSidebarToggle();
+    const placeGate=document.querySelector('#placeGate'),placeGateToggle=document.querySelector('#placeGateToggle'),placeGateClose=document.querySelector('#placeGateClose');
+    placeGateToggle.onclick=()=>placeGate.classList.remove('hide');
+    placeGateClose.onclick=()=>placeGate.classList.add('hide');
+    document.querySelectorAll('.place,[data-entry-place]').forEach(button=>button.addEventListener('click',()=>setTimeout(()=>{if(window.badaRouteLayer||window.singleRouteLayer)clearRoutes();loadWeather();},0)));
+    document.querySelectorAll('.map-language button').forEach(button=>button.addEventListener('click',()=>setTimeout(()=>{placeGateToggle.textContent=message('지역 선택','Choose area');placeGateClose.setAttribute('aria-label',message('선택 화면 닫기','Close area selection'));updateSidebarToggle();updateShadeMode();if(weatherState.loaded)drawWeatherWidget();else loadWeather();if(window.activeRouteSummary){const guideButton=document.querySelector('.plan-toggle');guideButton.textContent=message('경로 안내','Route guide');guideButton.title=message('현재 경로 안내 다시 열기','Open the current route guide');}},0)));
+    loadWeather();
+    setInterval(loadWeather,10*60*1000);
+  })();
+</script>
 </body>
 </html>
