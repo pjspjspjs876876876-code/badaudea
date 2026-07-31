@@ -429,7 +429,11 @@ map=L.map('map',{zoomControl:false}).setView([35.156,129.139],12);L.control.zoom
       try{
         const route=await window.badaEodiFootRoute(currentPosition,target.point);clearRoutes();window.singleRouteLayer=L.polyline(route.path,routeStyle).addTo(map);showDirectionArrows(route.path);
         const distance=(route.distance/1000).toFixed(1),minutes=Math.ceil(route.duration/60),info=document.querySelector('#detail .info');
-        if(info){info.children[2].querySelector('strong').textContent=`${distance} km`;info.children[3].querySelector('strong').textContent=`${minutes} ${language()==='en'?'min':'분'}`;}
+        if(info){
+          const compact=info.classList.contains('facility-travel-info'),distanceCell=info.children[compact?0:2]?.querySelector('strong'),timeCell=info.children[compact?1:3]?.querySelector('strong');
+          if(distanceCell)distanceCell.textContent=`${distance} km`;
+          if(timeCell)timeCell.textContent=`${minutes} ${language()==='en'?'min':'분'}`;
+        }
         highlightCourse([{point:currentPosition,name:message('내 위치','My location')},{point:target.point,name:title}]);
         document.querySelector('#detail').hidden=true;showLocationRouteSummary({meters:route.distance,minutes,destinationName:title});
         map.fitBounds(window.singleRouteLayer.getBounds(),{padding:[70,70]});
